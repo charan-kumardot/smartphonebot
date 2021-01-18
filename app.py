@@ -12,10 +12,11 @@ pairs =[
         ['(1|buy|buy the smartphone📱)',['what type of smart phone do you want to buy?']],
         ['(2|sell|sell the smartphone📱)',['what type of smart phone do you want to sell?']],
         ['(3|service|customer service|customer)',['enter your number our manager will contact you soon']],
-        ['([a-zA-Z]+)',['enter your number our manager will contact you soon']],
+        ['(ACER|ALCATEL|ALLVIEW|AMAZONAMOI|APPLE|ARCHOS|ASUS|AT&T|BENEFON|BENQ|BENQ-SIEMENS|BIRD|BLACKBERRY|BLACKVIEW|BLUBOSCH|BQ|CASIO|CAT|CELKON|CHEA|COOLPAD|DELL|EMPORIA|ENERGIZER|ERICSSON|ETEN|FAIRPHONE|FUJITSU-SIEMENS|GARMIN-ASUS|GIGABYTE|GIONEE|GOOGLE|HAIER|HONOR|HPHTC|HUAWEI|I-MATE|I-MOBILE|ICEMOBILE|INFINIX|INQ|INTEX|JOLLA|KARBONN|KYOCERA|LAVA|LEECO|LENOVO|LG|MAXON|MAXWEST|MEIZU|MICROMAX|MICROSOFT|MITAC|MITSUBISHI|MODU|MOTOROLA|MWG|NEC|NEONODE|NIU|NOKIA|NVIDIA|ONEPLUS|OPPO|ORANGE|PALM|PANASONIC|PANTECH|PARLA|PHILIPS|PLUMPOSH|PRESTIGIO|QMOBILE|QTEK|RAZER|REALME|SAGEM|SAMSUNG|SENDO|SEWON|SHARP|SIEMENS|SONIM|SONY|SONY ERICSSON|SPICET-MOBILE|TCL|TECNO|TEL.ME.|TELIT|THURAYA|TOSHIBA|ULEFONE|UNNECTOVERT|UVERYKOOL|VIVO|VK MOBILE|VODAFONE|WIKO|WND|XCUTE|XIAOMI|XOLO|YEZZ|YOTA|YUZTE)',['enter your number our manager will contact you soon']],
         ['(4|other|other quires)', ['choose the below optoions for the quires  1.for buy a smartphone(enter 1) 2.for sell the smartphone(enter 2) 3.for customer service(enter 3)']],
-        ['([\d{8,15}]|([\d{8,15}]|(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})|^(?:00|\\+)[0-9\\s.\\/-]{6,20}$))',['Thank you🤗.do you want to ask for other quires enter 4']],
-        ['(quite|bye|QUITE|Bye)',['Thank you have a nice day.🤗']]
+        ['([\d{8,15}]|(\d{3}[-\.\s]??\d{3}[-\.\s]??\d{4}|\(\d{3}\)\s*\d{3}[-\.\s]??\d{4}|\d{3}[-\.\s]??\d{4})|^(?:00|\\+)[0-9\\s.\\/-]{6,20}$)',['Thank you🤗.do you want to ask for other quires enter 4']],
+        ['(quite|bye|QUITE|Bye)',['Thank you have a nice day.🤗']],
+        ['(.*)', ['hey, choose the below optoions for the quires 1.for buy a smartphone(enter 1) 2.for sell the smartphone(enter 2) 3.for customer service(enter 3)']]
         ]
 
 @app.route('/', methods=['GET', 'POST'])
@@ -40,5 +41,6 @@ def c(x):
 
 if __name__ == '__main__':
     app. run(host='127.0.4.21', port=4040, debug=True)
+
 
 
