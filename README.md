@@ -9,9 +9,9 @@ for example key(1.txt)-pair(1.txt).count of key files should be equal to the cou
 
 ## Note:don't remove or rename any folder or any changes in the code.
 
-![alt text]https://github.com/charan-kumardot/smartphonebot/blob/main/WhatsApp%20Image%202021-01-18%20at%2011.16.58%20PM%20(1).jpeg
+![alt text]("https://github.com/charan-kumardot/smartphonebot/blob/main/WhatsApp%20Image%202021-01-18%20at%2011.16.58%20PM%20(1).jpeg")
 
-https://github.com/charan-kumardot/smartphonebot/blob/main/WhatsApp%20Image%202021-01-18%20at%2011.16.58%20PM.jpeg
+![alt text]("https://github.com/charan-kumardot/smartphonebot/blob/main/WhatsApp%20Image%202021-01-18%20at%2011.16.58%20PM.jpeg")
 
 ## how to create account in twilio
 
