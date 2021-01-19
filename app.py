@@ -87,7 +87,7 @@ def sms_reply():
 
     # print(msg)
 
-    return str(resp)
+    return none
 
 
 
