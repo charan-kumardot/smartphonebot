@@ -77,7 +77,8 @@ def sms_reply():
     msg = request.form.get('Body')
     if phoneno in obj:
         chat = Chat(pairs, reflections)
-        resp.message(chat.respond(msg))
+        #resp.message(chat.respond(msg))
+        return str(resp)
     else:
         a = Welcome(phoneno)
         obj.append(a.id)
@@ -86,7 +87,7 @@ def sms_reply():
 
     # print(msg)
 
-
+        return str(resp)
 
 
 
@@ -95,5 +96,3 @@ def sms_reply():
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
