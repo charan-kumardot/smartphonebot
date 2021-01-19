@@ -58,7 +58,16 @@ def c(x):
 
 
 @app.route("/sms", methods=['GET', 'POST'])
+def sms_reply():
+    """Respond to incoming with a simple text message."""
+    resp = MessagingResponse()
+    phoneno = request.form.get('From')
+    msg = request.form.get('Body')
+    chat = Chat(pairs, reflections)
 
+    #print(msg)
+    resp.message(chat.respond(msg))
+    return str(resp)
 
 
 
