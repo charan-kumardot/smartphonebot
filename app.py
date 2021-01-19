@@ -5,10 +5,10 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 
 
-app = Flask(_name_, template_folder='templates')
+app = Flask(__name__, template_folder='templates')
 
 class Welcome:
-    def _init_(self,idd):
+    def __init__(self,idd):
         self.id=idd
     def welcome():
         return '''
