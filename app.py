@@ -1,7 +1,6 @@
 from cht import Chat,reflections
 from flask import Flask, render_template, request
-import googletrans
-from googletrans import Translator
+
 
 
 
@@ -37,19 +36,30 @@ pairs =[
 
 
 @app.route('/', methods=['GET', 'POST'])
+
+@app.route('/', methods=['GET', 'POST'])
 def samplefunction():
-    translator = Translator()
     if request.method == 'GET':
         return render_template('index.html')
     if request.method == 'POST':
         greetIn = request.form['human']
         greetOut = c(greetIn)
-        return render_template('index.html',bot1 = translator.translate(str(greetOut), dest='he').text,bot2 = translator.translate(str(greetIn), dest='he').text)
+        return render_template('index.html',bot1 = greetOut,bot2 = greetIn)
 
 
 def c(x):
   chat = Chat(pairs,reflections)
   return chat.respond(x)
+
+
+
+
+
+
+
+if __name__ == '__main__':
+    app. run(host='127.0.4.21', port=4040, debug=True)
+
 
 
 
