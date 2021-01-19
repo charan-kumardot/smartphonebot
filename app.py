@@ -5,11 +5,11 @@ from twilio.twiml.messaging_response import MessagingResponse
 
 
 
-app = Flask(__name__, template_folder='templates')
+app = Flask(_name_, template_folder='templates')
 
-class welcome:
-    def _init_(self,id):
-        self.id=id
+class Welcome:
+    def _init_(self,idd):
+        self.id=idd
     def welcome():
         return '''
         ברוכים הבאים למגן סלולרי בהשגחה פרטית, איך אפשר לעזור? 
@@ -79,10 +79,10 @@ def sms_reply():
         chat = Chat(pairs, reflections)
         resp.message(chat.respond(msg))
     else:
-        a = welcome(phoneno)
+        a = Welcome(phoneno)
         obj.append(a.id)
 
-        resp.message(welcome.welcome())
+        resp.message(Welcome.welcome())
 
     # print(msg)
 
@@ -93,13 +93,8 @@ def sms_reply():
 
 
 
-
-
-
-
-
-
-
+if _name_ == '_main_':
+    app.run(debug=True)
 
 
 
