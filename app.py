@@ -1,6 +1,6 @@
 from cht import Chat,reflections
 from flask import Flask, render_template, request
-
+from twilio.twiml.messaging_response import MessagingResponse
 
 
 
@@ -52,6 +52,17 @@ def c(x):
   chat = Chat(pairs,reflections)
   return chat.respond(x)
 
+@app.route("/sms", methods=['GET', 'POST'])
+def sms_reply():
+    """Respond to incoming with a simple text message."""
+    resp = MessagingResponse()
+    phoneno = request.form.get('From')
+    msg = request.form.get('Body')
+    chat = Chat(pairs, reflections)
+
+    print(msg)
+    resp.message(chat.respond(msg))
+    return str(resp)
 
 
 
@@ -59,7 +70,7 @@ def c(x):
 
 
 if __name__ == '__main__':
-    app. run(host='127.0.4.21', port=4040, debug=True)
+    app. run(host='127.0.4.21', port=4040)
 
 
 
@@ -68,8 +79,7 @@ if __name__ == '__main__':
 
 
 
-if __name__ == '__main__':
-    app. run(host='127.0.4.21', port=4040, debug=True)
+
 
 
 
