@@ -78,7 +78,7 @@ def sms_reply():
     if phoneno in obj:
         chat = Chat(pairs, reflections)
         resp.message(chat.respond(msg))
-
+        
     else:
         a = Welcome(phoneno)
         obj.append(a.id)
@@ -87,7 +87,7 @@ def sms_reply():
 
     # print(msg)
 
-    return none
+    return str(resp)
 
 
 
